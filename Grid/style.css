@@ -1,0 +1,93 @@
+body {
+  background-color: lightcoral;
+}
+
+.container {
+  display: grid;
+  /* grid-template-columns: 30% 30% 30%;
+   */
+  grid-template-columns: 1fr 1fr 1fr;
+  /* And also we can use repeat function(how many it should repeat , how much value) to mention the grid template */
+  grid-template-columns: repeat(3, 1fr);
+  /* minmax(200px,1fr) * while reducing the screen size minval win maintain -200px max-1fr and also we can use repeat( 3 or auto-fit,minmax(200px,1fr))/
+  autofill will take the minimum width rest space will be empty repeat(auto-fill,minmax(200px,1fr)) 
+  /* fraction */
+  /* grid-template-columns: 100px 1fr 30%; */
+
+  /* column-gap: 20;
+  row-gap: 10px; short form below code */
+  gap: 10px 20px;
+  /* row and column */
+  grid-template-rows: 1fr 2fr 1fr;
+}
+.para {
+  padding: 1rem;
+  background-color: aqua;
+  color: azure;
+  font: bold 12px arial;
+  background-blend-mode: overlay;
+}
+
+.box {
+  background-color: green;
+  color: white;
+  font-size: 2rem;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+.outercontainer {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 200px 100px;
+  grid-auto-rows: 200px;
+  gap: 10px;
+  margin: 20px;
+  grid-auto-columns: column;
+}
+.box1 {
+  /* grid-column-start: 1;
+  grid-column-end: 3; */
+  grid-column: span 3;
+}
+.box2 {
+  grid-row: span 2;
+}
+.maincontainer div {
+  border: 1px solid black;
+  font-size: 3rem;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+.maincontainer {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 10vh 80vh 10vh;
+  grid-template-areas:
+    "h h h h h"
+    "sb1 m m m sb2"
+    "f f f f f";
+}
+
+.header {
+  grid-area: h;
+}
+.sidebar1 {
+  grid-area: sb1;
+}
+.main {
+  grid-area: m;
+}
+.sidebar2 {
+  grid-area: sb2;
+}
+.footer {
+  grid-area: f;
+}
+
+/* Front mentor is a wedsite to practise the html and css */
+/* cssgrid garden  */
+/* p{
+  text-transform: ;
+} */

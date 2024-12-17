@@ -1,0 +1,75 @@
+/* body {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+div {
+  width: 100px;
+  height: 100px;
+  background-color: orangered;
+  transition-duration: 2s;
+}
+
+/* 
+Transition will be occur based on the event for ex: if you  hover the div somechange should happen after 
+Eg : when i hover the div width should increse 2X
+
+* Transition duration is more important : eg  transition-duration : 3s ;
+*how can we use will see ?
+we are going to transforming our div so we need to use transform keyword 
+*Eg:  transform :  translatex(500px); using this we can move our idv in right side 500px  -----> direction
+*rotate(360deg); => here we need to mention degree value insidew the paranthesis
+*skew(-45) ; => => here we need to mention degree value insidew the paranthesis => it look like slightly slanding posture 
+
+
+Animation : Animation will be happen when the page is loaded and alos based on the condition we can excute the animation 
+Eg: when the input tag is empty but your are try to submit at that time kind of shake animation we can apply to the input box 
+
+* key Point : short cut :  animation :  animationName ,duration,linear , infinite ;
+
+ * step 1 : first write the animation name and duration
+ *step 2 : use @keyframe keyword to use the animation 
+ Eg:@keyframe animationName{
+from{                                                0%{
+                                                         transform :  translatex(500px);
+
+}to{            or else we can use percentage                 }
+
+                                                     50%{  
+                                                        
+}                                                            }
+   }                                                100%{
+
+                                                            }
+
+  * step3: Animation related property 
+
+  * animation duration : 3s how much second animation will apply
+  * animation delay : 1s  After refershing our webpage after 1s only animation will start 
+  * animation iteration-count: 3 or infinite how many time animation will be run 
+  *animation-direction : reverse 
+  *animation-timing-function : ease ,linear 
+  * alternate - which is used in animation to do the alternate animation 
+
+
+
+
+  Perspective : it give 3d like effect 
+        when we normally use the translateX we can't able to see the 3d shape roatation of the  div , but whne you use the perspective(100px) its a kind of function inside that we need to mention the value in px ... as the px increse it is difficult to see the persepctive animation 
+    
+        
+     *   Transform-origin :top; property is use to stick.. here top will not move any where its kind of sticked attached
+*/
+
+div:hover {
+  /* width: 200px;
+  background-color: blueviolet;
+  border-radius: 50%; */
+
+  transform: translateX(500px) rotate(360deg) scaleX(2) skewX(-45deg);
+}
